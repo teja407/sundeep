@@ -1,0 +1,743 @@
+
+Logging initialized using configuration in jar:file:/mnt/resource/hadoop/yarn/local/usercache/admin/filecache/2/109586/hive-common.jar!/hive-log4j.properties
+OK
+Time taken: 2.452 seconds
+19/01/08 12:04:30 [main]: WARN parse.BaseSemanticAnalyzer: Dynamic partitioning is used; only validating 0 columns
+19/01/08 12:04:30 [main]: WARN parse.BaseSemanticAnalyzer: Dynamic partitioning is used; only validating 0 columns
+19/01/08 12:04:30 [main]: WARN parse.RowResolver: Duplicate column info for st.batchid was overwritten in RowResolver map: _col37: bigint by _col38: bigint
+19/01/08 12:04:31 [main]: WARN parse.RowResolver: Duplicate column info for st.batchid was overwritten in RowResolver map: _col37: bigint by _col38: bigint
+19/01/08 12:04:39 [main]: WARN metadata.Hive: Patch..tpart: Partition(values:[NZ], dbName:prodoperationaldb, tableName:base_organisationhierarchy, createTime:1544270721, lastAccessTime:0, sd:StorageDescriptor(cols:[FieldSchema(name:base_org_hierarchy_key, type:bigint, comment:null), FieldSchema(name:id, type:varchar(18), comment:null), FieldSchema(name:territorytype, type:varchar(40), comment:null), FieldSchema(name:hierarchytype, type:varchar(18), comment:null), FieldSchema(name:resourcekey, type:varchar(18), comment:null), FieldSchema(name:endmarketid, type:varchar(18), comment:null), FieldSchema(name:endmarketname, type:varchar(80), comment:null), FieldSchema(name:divisionid, type:varchar(18), comment:null), FieldSchema(name:divisionname, type:varchar(80), comment:null), FieldSchema(name:regionid, type:varchar(18), comment:null), FieldSchema(name:regionname, type:varchar(80), comment:null), FieldSchema(name:areaid, type:varchar(18), comment:null), FieldSchema(name:areaname, type:varchar(80), comment:null), FieldSchema(name:territoryid, type:varchar(18), comment:null), FieldSchema(name:territoryname, type:varchar(80), comment:null), FieldSchema(name:marketiso, type:varchar(4), comment:null), FieldSchema(name:parentid, type:varchar(18), comment:null), FieldSchema(name:parentmanager, type:varchar(80), comment:null), FieldSchema(name:supervisorterritoryid, type:varchar(18), comment:null), FieldSchema(name:supervisorterritoryname, type:varchar(80), comment:null), FieldSchema(name:distributiontype, type:varchar(18), comment:null), FieldSchema(name:distributionentity, type:varchar(18), comment:null), FieldSchema(name:distributionwarehousename, type:varchar(80), comment:null), FieldSchema(name:distributionwarehousemanager, type:varchar(80), comment:null), FieldSchema(name:active, type:int, comment:null), FieldSchema(name:description, type:varchar(80), comment:null), FieldSchema(name:primaryresource, type:varchar(18), comment:null), FieldSchema(name:secondaryresource, type:varchar(18), comment:null), FieldSchema(name:secondaryresourcefromdate, type:date, comment:null), FieldSchema(name:secondaryresourcetodate, type:date, comment:null), FieldSchema(name:createdate, type:timestamp, comment:null), FieldSchema(name:createdby, type:varchar(25), comment:null), FieldSchema(name:lastupdatedate, type:timestamp, comment:null), FieldSchema(name:lastupdatedby, type:varchar(25), comment:null), FieldSchema(name:sourcesystemid, type:varchar(25), comment:null), FieldSchema(name:lets_load_date, type:timestamp, comment:null), FieldSchema(name:lets_load_update_date, type:timestamp, comment:null), FieldSchema(name:lets_load_batch_id, type:bigint, comment:null), FieldSchema(name:lets_load_update_batch_id, type:bigint, comment:null), FieldSchema(name:lets_effective_start_date, type:timestamp, comment:null), FieldSchema(name:lets_effective_end_date, type:timestamp, comment:null), FieldSchema(name:lets_active_flag, type:boolean, comment:null)], location:adl://home/hive/warehouse/prodoperationaldb.db/base_organisationhierarchy/country_code=NZ, inputFormat:org.apache.hadoop.hive.ql.io.orc.OrcInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat, compressed:false, numBuckets:1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.orc.OrcSerde, parameters:{serialization.format=|, line.delim=
+, field.delim=|}), bucketCols:[lets_load_batch_id], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{}), storedAsSubDirectories:false), parameters:{transient_lastDdlTime=1546865372, totalSize=13761, numRows=0, rawDataSize=0, numFiles=2})
+Query ID = yarn_20190108120427_52d0d8a0-5d31-4c38-bdb0-f513e4aed25a
+Total jobs = 1
+Launching Job 1 out of 1
+Status: Running (Executing on YARN cluster with App id application_1544588957904_56316)
+
+Status: Failed
+19/01/08 12:04:53 [main]: ERROR SessionState: Status: Failed
+Vertex failed, vertexName=Reducer 4, vertexId=vertex_1544588957904_56316_1_05, diagnostics=[Task failed, taskId=task_1544588957904_56316_1_05_000000, diagnostics=[TaskAttempt 0 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 1 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 2 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 3 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+]], Vertex did not succeed due to OWN_TASK_FAILURE, failedTasks:1 killedTasks:0, Vertex vertex_1544588957904_56316_1_05 [Reducer 4] killed/failed due to:OWN_TASK_FAILURE]
+19/01/08 12:04:53 [main]: ERROR SessionState: Vertex failed, vertexName=Reducer 4, vertexId=vertex_1544588957904_56316_1_05, diagnostics=[Task failed, taskId=task_1544588957904_56316_1_05_000000, diagnostics=[TaskAttempt 0 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 1 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 2 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 3 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+]], Vertex did not succeed due to OWN_TASK_FAILURE, failedTasks:1 killedTasks:0, Vertex vertex_1544588957904_56316_1_05 [Reducer 4] killed/failed due to:OWN_TASK_FAILURE]
+DAG did not succeed due to VERTEX_FAILURE. failedVertices:1 killedVertices:0
+19/01/08 12:04:53 [main]: ERROR SessionState: DAG did not succeed due to VERTEX_FAILURE. failedVertices:1 killedVertices:0
+FAILED: Execution Error, return code 2 from org.apache.hadoop.hive.ql.exec.tez.TezTask. Vertex failed, vertexName=Reducer 4, vertexId=vertex_1544588957904_56316_1_05, diagnostics=[Task failed, taskId=task_1544588957904_56316_1_05_000000, diagnostics=[TaskAttempt 0 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 1 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 2 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 3 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+]], Vertex did not succeed due to OWN_TASK_FAILURE, failedTasks:1 killedTasks:0, Vertex vertex_1544588957904_56316_1_05 [Reducer 4] killed/failed due to:OWN_TASK_FAILURE]DAG did not succeed due to VERTEX_FAILURE. failedVertices:1 killedVertices:0
+19/01/08 12:04:53 [main]: ERROR ql.Driver: FAILED: Execution Error, return code 2 from org.apache.hadoop.hive.ql.exec.tez.TezTask. Vertex failed, vertexName=Reducer 4, vertexId=vertex_1544588957904_56316_1_05, diagnostics=[Task failed, taskId=task_1544588957904_56316_1_05_000000, diagnostics=[TaskAttempt 0 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 1 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 2 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+], TaskAttempt 3 failed, info=[Error: Failure while running task:java.lang.RuntimeException: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:173)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.run(TezProcessor.java:139)
+	at org.apache.tez.runtime.LogicalIOProcessorRuntimeTask.run(LogicalIOProcessorRuntimeTask.java:347)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:194)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable$1.run(TezTaskRunner.java:185)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1866)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:185)
+	at org.apache.tez.runtime.task.TezTaskRunner$TaskRunnerCallable.callInternal(TezTaskRunner.java:181)
+	at org.apache.tez.common.CallableWithNdc.call(CallableWithNdc.java:36)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:284)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordProcessor.run(ReduceRecordProcessor.java:266)
+	at org.apache.hadoop.hive.ql.exec.tez.TezProcessor.initializeAndRunProcessor(TezProcessor.java:150)
+	... 14 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Hive Runtime Error while processing row (tag=0) {"key":{"_col0":{"transactionid":59749,"bucketid":0,"rowid":1},"_col1":"NZ"},"value":{"_col0":2}}
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:352)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource.pushRecord(ReduceRecordSource.java:274)
+	... 16 more
+Caused by: org.apache.hadoop.hive.ql.metadata.HiveException: Error evaluating cardinality_violation(_col0,'NZ')
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:86)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.FilterOperator.process(FilterOperator.java:122)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:88)
+	at org.apache.hadoop.hive.ql.exec.Operator.forward(Operator.java:841)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.forward(GroupByOperator.java:1022)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processAggr(GroupByOperator.java:827)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.processKey(GroupByOperator.java:701)
+	at org.apache.hadoop.hive.ql.exec.GroupByOperator.process(GroupByOperator.java:767)
+	at org.apache.hadoop.hive.ql.exec.tez.ReduceRecordSource$GroupIterator.next(ReduceRecordSource.java:343)
+	... 17 more
+Caused by: java.lang.RuntimeException: Cardinality Violation in Merge statement: [59749, 0, 0],NZ
+	at org.apache.hadoop.hive.ql.udf.generic.GenericUDFCardinalityViolation.evaluate(GenericUDFCardinalityViolation.java:56)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeGenericFuncEvaluator._evaluate(ExprNodeGenericFuncEvaluator.java:186)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:77)
+	at org.apache.hadoop.hive.ql.exec.ExprNodeEvaluator.evaluate(ExprNodeEvaluator.java:65)
+	at org.apache.hadoop.hive.ql.exec.SelectOperator.process(SelectOperator.java:81)
+	... 27 more
+]], Vertex did not succeed due to OWN_TASK_FAILURE, failedTasks:1 killedTasks:0, Vertex vertex_1544588957904_56316_1_05 [Reducer 4] killed/failed due to:OWN_TASK_FAILURE]DAG did not succeed due to VERTEX_FAILURE. failedVertices:1 killedVertices:0
