@@ -1,0 +1,61 @@
+False
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr
+{
+ "Activity Status": "Failed",
+ "Database": "Prodoperationaldb",
+ "Table": "Base_Organisationhierarchy",
+ "Activity Date": "19/01/08 12:04:53",
+ "Error Msg1": "19/01/08 12:04:53 [main]: error sessionstate: status: failed",
+ "Error Msg2": "19/01/08 12:04:53 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
+ "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [59749, 0, 0],nz",
+ "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'nz')",
+ "Action Param": "nz",
+ "Activity": "Hive",
+ "Action": "Hive SQL"
+}
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (12)
+{
+ "Activity Status": "Failed",
+ "Database": "Prodoperationaldb",
+ "Table": "Delivery_Line_Fact",
+ "Activity Date": "19/01/14 08:10:55",
+ "Error Msg1": "19/01/14 08:10:55 [main]: error sessionstate: status: failed",
+ "Error Msg2": "19/01/14 08:10:55 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
+ "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [131581, 0, 224833],cl,2019,01",
+ "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
+ "Action Param": "cl",
+ "Activity": "Hive",
+ "Action": "Hive SQL"
+}
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (17)
+{
+ "Activity Status": "Failed",
+ "Database": "Prodoperationaldb",
+ "Table": "Price_Tracking_Fact",
+ "Activity Date": "19/01/28 10:17:31",
+ "Error Msg1": "19/01/28 10:17:31 [main]: error sessionstate: status: failed",
+ "Error Msg2": "19/01/28 10:17:31 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
+ "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [147974, 0, 0],cl,2019,1",
+ "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
+ "Action Param": "cl",
+ "Activity": "Hive",
+ "Action": "Hive SQL"
+}
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (29)
+>>> 
+ RESTART: C:\Users\ggummadi\Desktop\desktop\petra-master\ErrorLogAutomation.py 
+False
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr
+{
+ "Activity Status": "Failed",
+ "Database": "Prodoperationaldb",
+ "Table": "Base_Organisationhierarchy",
+ "Activity Date": "19/01/08 12:04:53",
+ "Error Msg1": "19/01/08 12:04:53 [main]: error sessionstate: status: failed",
+ "Error Msg2": "19/01/08 12:04:53 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
+ "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [59749, 0, 0],nz",
+ "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'nz')",
+ "Action Param": "nz",
+ "Activity": "Hive",
+ "Action": "Hive SQL"
+}
