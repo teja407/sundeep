@@ -1,1 +1,35 @@
-hi
+Command line instructions
+
+Git global setup
+git config --global user.name "teja"
+git config --global user.email "tejaatla123@gmail.com"
+
+Create a new repository
+git clone http://34.73.21.86/teja/sample-.git
+cd sample-
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder
+cd existing_folder
+git init
+git remote add origin http://34.73.21.86/teja/sample-.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin http://35.227.78.66/teja/sample-.git
+git push -u origin --all
+git push -u origin --tags
+
+http://35.227.78.66/teja/sample-.git
+
+http://35.227.78.66/teja/test-jenkins.git
+
+
+http://10.142.0.9/teja/test-jenkins.git
