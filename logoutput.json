@@ -1,61 +1,44 @@
+C:\Users\ggummadi\AppData\Local\Programs\Python\Python37-32\python.exe C:/Users/ggummadi/Desktop/desktop/petra-master/ErrorLogAutomation.py
 False
------C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr
-{
- "Activity Status": "Failed",
- "Database": "Prodoperationaldb",
- "Table": "Base_Organisationhierarchy",
- "Activity Date": "19/01/08 12:04:53",
- "Error Msg1": "19/01/08 12:04:53 [main]: error sessionstate: status: failed",
- "Error Msg2": "19/01/08 12:04:53 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
- "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [59749, 0, 0],nz",
- "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'nz')",
- "Action Param": "nz",
- "Activity": "Hive",
- "Action": "Hive SQL"
-}
 -----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (12)
 {
+ "starttime": "19/01/14 08:08:45",
+ "endtime": "19/01/14 08:10:55",
  "Activity Status": "Failed",
  "Database": "Prodoperationaldb",
  "Table": "Delivery_Line_Fact",
- "Activity Date": "19/01/14 08:10:55",
- "Error Msg1": "19/01/14 08:10:55 [main]: error sessionstate: status: failed",
- "Error Msg2": "19/01/14 08:10:55 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
- "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [131581, 0, 224833],cl,2019,01",
- "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
+ "Root_Cause_Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [131581, 0, 224833],cl,2019,01",
+ "Root_Cause_Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
  "Action Param": "cl",
  "Activity": "Hive",
- "Action": "Hive SQL"
+ "Action": "java -jar C:\\Users\\ggummadi\\Downloads\\jenkins-cli.jar -s http://35.196.143.80:8080  build  hive-test -f --username admin --password admin"
 }
 -----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (17)
 {
+ "starttime": "19/01/28 10:15:00",
+ "endtime": "19/01/28 10:17:31",
  "Activity Status": "Failed",
  "Database": "Prodoperationaldb",
  "Table": "Price_Tracking_Fact",
- "Activity Date": "19/01/28 10:17:31",
- "Error Msg1": "19/01/28 10:17:31 [main]: error sessionstate: status: failed",
- "Error Msg2": "19/01/28 10:17:31 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
- "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [147974, 0, 0],cl,2019,1",
- "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
+ "Root_Cause_Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [147974, 0, 0],cl,2019,1",
+ "Root_Cause_Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
  "Action Param": "cl",
  "Activity": "Hive",
- "Action": "Hive SQL"
+ "Action": "java -jar C:\\Users\\ggummadi\\Downloads\\jenkins-cli.jar -s http://35.196.143.80:8080  build  hive-test -f --username admin --password admin"
 }
 -----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr (29)
->>> 
- RESTART: C:\Users\ggummadi\Desktop\desktop\petra-master\ErrorLogAutomation.py 
-False
------C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr
+-----C:\Users\ggummadi\Desktop\desktop\petra-master\petra-master\stderr1
 {
+ "starttime": "19/01/14 08:08:45",
+ "endtime": "19/01/14 08:10:55",
  "Activity Status": "Failed",
  "Database": "Prodoperationaldb",
- "Table": "Base_Organisationhierarchy",
- "Activity Date": "19/01/08 12:04:53",
- "Error Msg1": "19/01/08 12:04:53 [main]: error sessionstate: status: failed",
- "Error Msg2": "19/01/08 12:04:53 [main]: error sessionstate: dag did not succeed due to vertex_failure. failedvertices:1 killedvertices:0",
- "Root Cause Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [59749, 0, 0],nz",
- "Root Cause Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'nz')",
- "Action Param": "nz",
+ "Table": "Delivery_Line_Fact",
+ "Root_Cause_Analysis Msg1": "caused by: java.lang.runtimeexception: cardinality violation in merge statement: [131581, 0, 224833],cl,2019,01",
+ "Root_Cause_Analysis Msg2": "caused by: org.apache.hadoop.hive.ql.metadata.hiveexception: error evaluating cardinality_violation(_col0,'cl',_col2,_col3)",
+ "Action Param": "cl",
  "Activity": "Hive",
- "Action": "Hive SQL"
+ "Action": "java -jar C:\\Users\\ggummadi\\Downloads\\jenkins-cli.jar -s http://35.196.143.80:8080  build  hive-test -f --username admin --password admin"
 }
+
+Process finished with exit code 0
