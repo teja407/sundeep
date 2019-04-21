@@ -1,0 +1,367 @@
+
+Microsoft certified Associate: Azure Administrator (AZ-100 and AZ-101) Course Agenda
+
+Exam AZ-100: Microsoft Azure Infrastructure and Deployment
+
+1.Manage Subscriptions and Resources
+
+Module 1: Managing Azure Subscriptions
+
+Lessons
+
+Overview of Azure Subscriptions
+
+Billing
+
+Azure Policy
+
+Module 2: Access Management for Cloud Resources
+
+Lessons
+
+Azure Users and Groups
+
+Role-based Access Control
+
+Module 3: Monitoring and Diagnostics
+
+Lessons
+
+Exploring Monitoring Capabilities in Azure
+
+Azure Alerts
+
+Azure Activity Log
+
+Module 4: Log Analytics
+
+Lessons
+
+Introduction to Log Analytics
+
+Querying and Analyzing Log Analytics Data
+
+Page | 1
+
+
+Module 5: Azure Resource Manager
+
+Lessons
+
+ARM templates
+
+Resource Groups
+
+Module 6: Azure Tips, Tricks, and Tools
+
+Lessons
+
+Azure Portal
+
+Azure Tools and Environment
+
+2. Implementing and Managing Storage
+
+Module 1: Overview of Azure Storage
+
+Lessons
+
+Azure storage accounts
+
+Data replication
+
+Azure Storage Explorer
+
+Module 2: Storage Services
+
+Lessons
+
+Virtual machine storage
+
+Blob storage
+
+Azure files
+
+Structured storage
+
+Module 3: Securing and Managing Storage
+
+Lessons
+
+Shared access keys
+
+Azure backup
+
+Azure File Sync
+
+Page | 2
+
+
+Module 4: Storing and Accessing Data
+
+Lessons
+
+Azure Content Delivery Network
+
+Import and Export service
+
+Module 5: Monitoring Storage
+
+Lessons
+
+Metrics and Alerts
+
+Activity Log
+
+3.Deploying and Managing Virtual Machines
+
+Module 1: Overview of Azure Machines
+
+Lessons
+
+Azure Virtual Machines Overview
+
+Planning Considerations
+
+Module 2: Creating Virtual Machines
+
+Lessons
+
+Overview of the Virtual Machine Creation Overview
+
+Creating Virtual Machines in the Azure Portal
+
+Creating Virtual Machines (PowerShell)
+
+Creating Virtual Machines using ARM Templates
+
+Module 3: Deploying Virtual Machine Images
+
+Lessons
+
+Deploying Custom Images
+
+Deploying Linux Virtual Machines
+
+Page | 3
+
+
+Module 4: Configuring Virtual Machines
+
+Lessons
+
+Overview of Virtual Machine Configuration
+
+Virtual Machine Networking
+
+Virtual Machine Storage
+
+Module 5: Configuring Availability and Extensibility
+
+Lessons
+
+Virtual Machine Availability
+
+Virtual Machine Scalability
+
+Applying Virtual Machine Extensions
+
+Module 6: Managing and Monitoring Virtual Machines
+
+Lessons
+
+Backup and Restore
+
+Monitoring Virtual Machines
+
+4.Configuring and Managing Virtual Networks
+
+Module 1: Azure Virtual Networks
+
+Lessons
+
+Introducing Virtual Networks
+
+Creating Azure Virtual Networks
+
+Review of IP Addressing
+
+Network Routing
+
+Module 2: Azure DNS
+
+Lessons
+
+Azure DNS Basics
+
+Implementing Azure DNS
+
+Page | 4
+
+
+Module 3: Securing Virtual Network Resources
+
+Lessons
+
+Introduction to Network Security Groups
+
+Implementing Network Security Groups and Service Endpoints
+
+Module 4: Connecting Virtual Networks
+
+Lessons
+
+Intersite Connectivity (VNet-to-VNet Connections)
+
+Virtual Network Peering
+
+5. Manage Identities
+
+Module 1: Managing Azure Active Directory
+
+Lessons
+
+Azure Active Directory Overview
+
+Self-Service Password Reset
+
+Azure AD Identity Protection
+
+Integrating SaaS Applications with Azure AD
+
+Module 2: Managing Azure Active Directory Objects
+
+Lessons
+
+Azure Domains and Tenants
+
+Azure Users and Groups
+
+Azure Roles
+
+Managing Devices
+
+Module 3: Implementing and Managing Hybrid Identities
+
+Lessons
+
+Azure Active Directory Integration Options
+
+Azure AD Application Proxy
+
+Page | 5
+
+
+EXAM AZ-101: Microsoft Azure Integration and Security
+
+1. Migrate Servers to Azure
+
+Module 1: Managing Azure Active Directory
+
+Lessons
+
+Overview of Cloud Migration
+
+Azure Migrate: The Process
+
+Module 2: Azure Site Recovery
+
+Lessons
+
+Overview of ASR
+
+Preparing the Infrastructure
+
+Completing the Migration Process
+
+Module 3: Additional Migration Scenarios
+
+Lessons
+
+VMWare Migration
+
+System Center VMM Migration: Video Walkthrough
+
+2. Implementing and Managing Application Services
+
+Module 1: Introducing the Azure App Service Platform
+
+Lessons
+
+Introducing Azure App Service
+
+App Service Environments
+
+Page | 6
+
+
+Module 2: Managing and Securing Web Apps
+
+Lessons
+
+Deploying Web Apps
+
+Managing Web Apps
+
+App Service Security
+
+Module 3: Scaling and Performance
+
+Lessons
+
+Scale Up and Scale Out
+
+Autoscale and Grow out
+
+Optimizing Bandwidth and Web Traffic
+
+Module 4: Deploying Serverless Computing Solutions
+
+Lessons
+
+Serverless Computing Concepts
+
+Managing Azure Functions
+
+Managing Event Grid
+
+Managing Service Bus
+
+Managing Logic App
+
+3. Secure Identities
+
+Module 1: Introduction to Identity Protection in Azure
+
+Lessons
+
+Role-Based Access Control
+
+Azure Active Directory (Refresher)
+
+Protecting Privileged Access in the Environment
+
+Page | 7
+
+
+Module 2: Using Multi-Factor Authentication for Secure Access
+
+Lessons
+
+Introducing Multi-Factor Authentication
+
+Implementing MFA
+
+Module 3: Azure AD Privileged Identity Management
+
+Lessons
+
+Getting Started with PIM
+
+PIM Security Wizard
+
+PIM for Directory Roles
+
+PIM for Role Resources
+
+Page | 8 
